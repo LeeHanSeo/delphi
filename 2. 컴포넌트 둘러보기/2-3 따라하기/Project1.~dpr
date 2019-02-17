@@ -4,14 +4,12 @@ uses
   Forms,
   Unit1 in 'Unit1.pas' {Form1},
   Unit2 in 'Unit2.pas' {Frame2: TFrame},
-  Unit3 in 'Unit3.pas' {Frame3: TFrame},
-  Unit4 in 'Unit4.pas' {Form4};
+  Unit3 in 'Unit3.pas' {Frame3: TFrame};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TForm4, Form4);
   Application.Run;
 end.
