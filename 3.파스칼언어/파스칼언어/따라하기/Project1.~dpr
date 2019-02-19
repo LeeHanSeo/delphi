@@ -1,0 +1,16 @@
+program Project1;
+
+uses
+  Forms,
+  sum in 'sum.pas' {Form1},
+  Ans in 'Ans.pas' {Form2},
+  gop in 'gop.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.
