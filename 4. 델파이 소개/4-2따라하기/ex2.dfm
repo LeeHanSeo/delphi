@@ -28,7 +28,7 @@ object Form2: TForm2
     Top = 32
     Width = 75
     Height = 25
-    Caption = 'Button1'
+    Caption = 'Clear'
     TabOrder = 1
     OnClick = Button1Click
   end
@@ -37,7 +37,7 @@ object Form2: TForm2
     Top = 64
     Width = 75
     Height = 25
-    Caption = 'Button2'
+    Caption = 'Add'
     TabOrder = 2
     OnClick = Button2Click
   end
@@ -46,7 +46,7 @@ object Form2: TForm2
     Top = 96
     Width = 75
     Height = 25
-    Caption = 'Button3'
+    Caption = 'Delete'
     TabOrder = 3
     OnClick = Button3Click
   end
@@ -55,7 +55,7 @@ object Form2: TForm2
     Top = 128
     Width = 75
     Height = 25
-    Caption = 'Button4'
+    Caption = 'Save'
     TabOrder = 4
     OnClick = Button4Click
   end
@@ -64,7 +64,26 @@ object Form2: TForm2
     Top = 160
     Width = 75
     Height = 25
-    Caption = 'Button5'
+    Caption = 'Load'
     TabOrder = 5
+    OnClick = Button5Click
+  end
+  object Edit1: TEdit
+    Left = 32
+    Top = 328
+    Width = 121
+    Height = 21
+    TabOrder = 6
+    Text = 'Edit1'
+    OnKeyPress = Edit1KeyPress
+  end
+  object Button7: TButton
+    Left = 160
+    Top = 328
+    Width = 75
+    Height = 25
+    Caption = 'Message'
+    TabOrder = 7
+    OnClick = Button7Click
   end
 end
