@@ -306,8 +306,9 @@ object Form1: TForm1
       B3AB4CB36A933AF40D807E95BBE169449A7CD033E3C96DE067B75AE5F93C9392
       4E49A920BC9ACCB342D8DEB8349AD0251BAB12EA13FDA352B8933905B8FA556A
       3B7EB476AA5B14B441451DA8A00FFFD9}
+    Transparent = True
   end
-  object imgmisa: TImage
+  object imgMissile: TImage
     Left = 48
     Top = 96
     Width = 31
@@ -893,15 +894,16 @@ object Form1: TForm1
     Visible = False
   end
   object tmMisa: TTimer
-    Interval = 1
+    Enabled = False
+    Interval = 20
     OnTimer = tmMisaTimer
-    Left = 360
-    Top = 536
+    Left = 48
+    Top = 136
   end
   object tmEnemy: TTimer
-    Interval = 1
+    Interval = 20
     OnTimer = tmEnemyTimer
-    Left = 392
+    Left = 400
     Top = 8
   end
 end

@@ -1,0 +1,22 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils;
+
+var
+  idata : integer = 123456789;
+  sResult : string = '';
+  iDigit : integer = 1;
+  iTemp : integer;
+
+begin
+  repeat  //루프의 마지막에서 조건이 오고 조건이 성립할 때 까지 반복하는 문이다.
+    iDigit := iDigit * 10;
+    iTekp  := iData - (iData
+
+  until
+
+end.
+ 
