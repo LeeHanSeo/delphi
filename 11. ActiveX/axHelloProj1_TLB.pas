@@ -12,7 +12,7 @@ unit axHelloProj1_TLB;
 // ************************************************************************ //
 
 // PASTLWTR : 1.2
-// File generated on 2019-05-06 오후 9:51:56 from Type Library described below.
+// File generated on 2019-05-16 오후 11:58:38 from Type Library described below.
 
 // ************************************************************************  //
 // Type Lib: E:\LeeHanSeo\11. ActiveX\axHelloProj1.tlb (1)
@@ -22,7 +22,6 @@ unit axHelloProj1_TLB;
 // HelpString: axHelloProj1 Library
 // DepndLst: 
 //   (1) v2.0 stdole, (C:\Windows\SysWOW64\stdole2.tlb)
-//   (2) v4.0 StdVCL, (C:\WINDOWS\SysWOW64\stdvcl40.dll)
 // ************************************************************************ //
 {$TYPEDADDRESS OFF} // Unit must be compiled without type-checked pointers. 
 {$WARN SYMBOL_PLATFORM OFF}
@@ -146,6 +145,8 @@ type
     function Get_VisibleDockClientCount: Integer; safecall;
     function Get_Enabled: WordBool; safecall;
     procedure Set_Enabled(Value: WordBool); safecall;
+    function Get_ButtonVisible: Integer; safecall;
+    procedure Set_ButtonVisible(Value: Integer); safecall;
     property Visible: WordBool read Get_Visible write Set_Visible;
     property AutoScroll: WordBool read Get_AutoScroll write Set_AutoScroll;
     property AutoSize: WordBool read Get_AutoSize write Set_AutoSize;
@@ -166,6 +167,7 @@ type
     property AlignDisabled: WordBool read Get_AlignDisabled;
     property VisibleDockClientCount: Integer read Get_VisibleDockClientCount;
     property Enabled: WordBool read Get_Enabled write Set_Enabled;
+    property ButtonVisible: Integer read Get_ButtonVisible write Set_ButtonVisible;
   end;
 
 // *********************************************************************//
@@ -195,11 +197,12 @@ type
     property AlignDisabled: WordBool readonly dispid 215;
     property VisibleDockClientCount: Integer readonly dispid 216;
     property Enabled: WordBool dispid -514;
+    property ButtonVisible: Integer dispid 217;
   end;
 
 // *********************************************************************//
 // DispIntf:  IaxHelloEvents
-// Flags:     (0)
+// Flags:     (4096) Dispatchable
 // GUID:      {F4F38CEF-5604-4F57-AF4A-91347FEF8DF6}
 // *********************************************************************//
   IaxHelloEvents = dispinterface
@@ -281,6 +284,7 @@ type
     property PixelsPerInch: Integer index 206 read GetIntegerProp write SetIntegerProp stored False;
     property PrintScale: TOleEnum index 207 read GetTOleEnumProp write SetTOleEnumProp stored False;
     property Scaled: WordBool index 208 read GetWordBoolProp write SetWordBoolProp stored False;
+    property ButtonVisible: Integer index 217 read GetIntegerProp write SetIntegerProp stored False;
     property OnActivate: TNotifyEvent read FOnActivate write FOnActivate;
     property OnClick: TNotifyEvent read FOnClick write FOnClick;
     property OnCreate: TNotifyEvent read FOnCreate write FOnCreate;

@@ -1,6 +1,6 @@
 object axHello: TaxHello
-  Left = 218
-  Top = 182
+  Left = 421
+  Top = 309
   Width = 293
   Height = 165
   Caption = 'axHello'
