@@ -12,7 +12,7 @@ unit axHelloProj1_TLB;
 // ************************************************************************ //
 
 // PASTLWTR : 1.2
-// File generated on 2019-05-16 오후 11:58:38 from Type Library described below.
+// File generated on 2019-05-19 오후 4:23:45 from Type Library described below.
 
 // ************************************************************************  //
 // Type Lib: E:\LeeHanSeo\11. ActiveX\axHelloProj1.tlb (1)
@@ -147,6 +147,7 @@ type
     procedure Set_Enabled(Value: WordBool); safecall;
     function Get_ButtonVisible: Integer; safecall;
     procedure Set_ButtonVisible(Value: Integer); safecall;
+    function ShowText(const Param1: WideString): Integer; safecall;
     property Visible: WordBool read Get_Visible write Set_Visible;
     property AutoScroll: WordBool read Get_AutoScroll write Set_AutoScroll;
     property AutoSize: WordBool read Get_AutoSize write Set_AutoSize;
@@ -198,6 +199,7 @@ type
     property VisibleDockClientCount: Integer readonly dispid 216;
     property Enabled: WordBool dispid -514;
     property ButtonVisible: Integer dispid 217;
+    function ShowText(const Param1: WideString): Integer; dispid 218;
   end;
 
 // *********************************************************************//
@@ -245,6 +247,7 @@ type
     procedure CreateControl;
     procedure InitControlData; override;
   public
+    function ShowText(const Param1: WideString): Integer;
     property  ControlInterface: IaxHello read GetControlInterface;
     property  DefaultInterface: IaxHello read GetControlInterface;
     property Visible: WordBool index 201 read GetWordBoolProp write SetWordBoolProp;
@@ -343,6 +346,11 @@ function TaxHello.GetControlInterface: IaxHello;
 begin
   CreateControl;
   Result := FIntf;
+end;
+
+function TaxHello.ShowText(const Param1: WideString): Integer;
+begin
+  Result := DefaultInterface.ShowText(Param1);
 end;
 
 procedure Register;

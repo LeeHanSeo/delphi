@@ -67,6 +67,7 @@ type
     procedure Set_Visible(Value: WordBool); safecall;
     function Get_ButtonVisible: Integer; safecall;
     procedure Set_ButtonVisible(Value: Integer); safecall;
+    function ShowText(const Param1: WideString): Integer; safecall;
   public
     { Public declarations }
     procedure Initialize; override;
@@ -347,12 +348,17 @@ end;
 
 function TaxHello.Get_ButtonVisible: Integer;
 begin
-  Button1.Visible := Value = 1;
+  Result := Integer(Button1.Visible);
 end;
 
 procedure TaxHello.Set_ButtonVisible(Value: Integer);
 begin
+  Button1.Visible := Value = 1;
+end;
 
+function TaxHello.ShowText(const Param1: WideString): Integer;
+begin
+  ShowMessage(Param1);
 end;
 
 initialization

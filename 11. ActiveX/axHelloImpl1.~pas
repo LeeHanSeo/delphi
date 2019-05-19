@@ -65,6 +65,8 @@ type
     procedure Set_ScreenSnap(Value: WordBool); safecall;
     procedure Set_SnapBuffer(Value: Integer); safecall;
     procedure Set_Visible(Value: WordBool); safecall;
+    function Get_ButtonVisible: Integer; safecall;
+    procedure Set_ButtonVisible(Value: Integer); safecall;
   public
     { Public declarations }
     procedure Initialize; override;
@@ -341,6 +343,16 @@ end;
 procedure TaxHello.Button1Click(Sender: TObject);
 begin
   ShowMessage('æ»≥Á«œººø‰?');
+end;
+
+function TaxHello.Get_ButtonVisible: Integer;
+begin
+  Result := Integer(Button1.Visible);
+end;
+
+procedure TaxHello.Set_ButtonVisible(Value: Integer);
+begin
+  Button1.Visible := Value = 1;
 end;
 
 initialization
