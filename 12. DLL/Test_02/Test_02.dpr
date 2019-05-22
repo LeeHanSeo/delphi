@@ -13,9 +13,22 @@ library Test_02;
 uses
   SysUtils,
   Classes,
-  Unit1 in 'Unit1.pas' {Form1};
+  umain in 'umain.pas' {fmMain};
 
 {$R *.res}
+
+procedure ShowTestDlg; export;
+begin
+  fmMain:= TfmMain.Create(Nil);
+  try
+    fmMain.ShowModal;
+  finally
+    fmMain.Free;
+  end;
+end;
+
+exports
+  ShowTestDlg;
 
 begin
 end.

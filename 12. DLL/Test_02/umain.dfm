@@ -1,9 +1,9 @@
-object Form1: TForm1
-  Left = 279
-  Top = 161
-  Width = 609
-  Height = 490
-  Caption = 'Form1'
+object fmMain: TfmMain
+  Left = 103
+  Top = 147
+  Width = 576
+  Height = 534
+  Caption = 'fmMain'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object Memo1: TMemo
-    Left = 72
-    Top = 112
+    Left = 240
+    Top = 184
     Width = 185
     Height = 89
     Lines.Strings = (
