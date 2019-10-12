@@ -16,7 +16,6 @@ type
     procedure IdTCPServer1Connect(AThread: TIdPeerThread);
     procedure IdTCPServer1Disconnect(AThread: TIdPeerThread);
   private
-    { Private declarations }
     procedure doLogin(AThread: TIdPeerThread; Strings:TStringList);
     procedure doTalk(AThread: TIdPeerThread; Strings:TStringList);
     procedure doMsg(AThread: TIdPeerThread; Strings:TStringList);
@@ -44,12 +43,14 @@ var
 begin
   stTemp := AThread.Connection.ReadLn;
 
+  Memo1.Lines.Add(stTemp);
+
   st1Temp := TStringList.Create;
   st1Temp.Text := StringReplace(stTemp, ';', #13, [rfReplaceAll]);
 
   if LowerCase(st1Temp.Strings[0]) = 'login' then doLogin(AThread, st1Temp)
   else if LowerCase(st1Temp.Strings[0]) = 'talk' then doTalk(AThread, st1Temp)
-  else if LowerCase(st1Temp.Strings[0]) = 'msg' then doMsg(AThread, st1Temp);
+  else if LowerCase(st1Temp.Strings[0]) = 'msg' then domsg(AThread, st1Temp)
 end;
 
 procedure TForm1.IdTCPServer1Connect(AThread: TIdPeerThread);

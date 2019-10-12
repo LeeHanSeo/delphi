@@ -39,7 +39,7 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
   IdTCPClient1.Connect;
   IdTCPClient1.WriteLn(Format('Login;%s', [Edit2.Text]));
-  //if IdTCPClient1.Connected = True then ShowMessage('立加肯丰');
+  if IdTCPClient1.Connected = True then ShowMessage('立加肯丰');
 end;
 
 procedure TForm1.Edit1KeyPress(Sender: TObject; var Key: Char);
